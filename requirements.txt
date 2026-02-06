@@ -1,0 +1,6 @@
+streamlit
+numpy
+PyWavelets
+plotly
+yfinance
+pandas
