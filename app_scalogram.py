@@ -340,10 +340,12 @@ def main():
             
             """)
             
+    except ValueError as ve:
+        st.error(f"Data error: {str(ve)}")
+        st.info("Check that the asset symbol is valid and that the date range contains trading days.")
     except Exception as e:
-        st.error(f"Error: {str(e)}")
-        st.info("Please verify the ticker symbol is valid and the date range contains trading data.")
-
+        st.error(f"Unexpected system error: {str(e)}")
+        st.info("Please check the console for more details or try different parameters.")
 
 if __name__ == "__main__":
     main()
